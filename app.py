@@ -9,7 +9,8 @@ app.config['SESSION_TYPE'] = 'filesystem'
 
 Session(app)
 
-socketio = SocketIO(app, cors_allowed_origins=['https://inspirados2021.herokuapp.com'],manage_session=False)
+socketio = SocketIO(app, manage_session=False)
+socketio.init_app(app, cors_allowed_origins="*")
 
 
 @app.route('/', methods=['GET', 'POST'])
