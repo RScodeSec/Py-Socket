@@ -53,6 +53,5 @@ def left(message):
     emit('status', {'msg': username + ' Ha salido de la SALA.'}, room=room)
 
 
-if __name__ == '__main__':
-    socketio.init_app(app, cors_allowed_origins="*")
+if __name__ == 'main':
     socketio.run(app)
