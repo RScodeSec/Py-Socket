@@ -54,4 +54,5 @@ def left(message):
 
 
 if __name__ == '__main__':
+    socketio.init_app(app, cors_allowed_origins="*")
     socketio.run(app)
