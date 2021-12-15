@@ -8,7 +8,7 @@
     <link href="../static/style.css" rel="stylesheet" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
     
        
    
@@ -20,6 +20,7 @@
                     socket.emit('join', {});
                 });
                 socket.on('status', function(data) {
+                  console.log('connected to socket');
                     $('#chat').val($('#chat').val() + '[' + data.msg + ']\n');
                     $('#chat').scrollTop($('#chat')[0].scrollHeight);
                 });
