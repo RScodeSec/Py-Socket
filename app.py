@@ -9,7 +9,7 @@ app.config['SESSION_TYPE'] = 'filesystem'
 
 Session(app)
 
-socketio = SocketIO(app, manage_session=False, cors_allowed_origins="*")
+socketio = SocketIO(app, manage_session=False)
 
 
 @app.route('/', methods=['GET', 'POST'])
